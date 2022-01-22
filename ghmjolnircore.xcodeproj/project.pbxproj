@@ -3,110 +3,341 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		"ghmjolnircore::ghmjolnircorePackageTests::ProductTarget" /* ghmjolnircorePackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_78 /* Build configuration list for PBXAggregateTarget "ghmjolnircorePackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_81 /* PBXTargetDependency */,
+			);
+			name = ghmjolnircorePackageTests;
+			productName = ghmjolnircorePackageTests;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		92339D27279C97C0005DE201 /* ghmjolnircore.docc in Sources */ = {isa = PBXBuildFile; fileRef = 92339D26279C97C0005DE201 /* ghmjolnircore.docc */; };
-		92339D2D279C97C0005DE201 /* ghmjolnircore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D22279C97C0005DE201 /* ghmjolnircore.framework */; };
-		92339D32279C97C0005DE201 /* ghmjolnircoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339D31279C97C0005DE201 /* ghmjolnircoreTests.swift */; };
-		92339D33279C97C0005DE201 /* ghmjolnircore.h in Headers */ = {isa = PBXBuildFile; fileRef = 92339D25279C97C0005DE201 /* ghmjolnircore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_55 /* GHLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GHLiveData.swift */; };
+		OBJ_56 /* GHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GHBaseViewController.swift */; };
+		OBJ_57 /* GHBundleParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GHBundleParameters.swift */; };
+		OBJ_58 /* GHManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GHManagerController.swift */; };
+		OBJ_59 /* GHNavigationControllerExtesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GHNavigationControllerExtesnion.swift */; };
+		OBJ_60 /* GHBaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GHBaseViewControllerDelegate.swift */; };
+		OBJ_61 /* GHCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* GHCacheImage.swift */; };
+		OBJ_62 /* GHCacheImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* GHCacheImageDelegate.swift */; };
+		OBJ_63 /* GHGenericCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* GHGenericCollectionViewController.swift */; };
+		OBJ_64 /* GHModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* GHModelDelegate.swift */; };
+		OBJ_65 /* GHCollectionCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* GHCollectionCellDelegate.swift */; };
+		OBJ_66 /* GHTableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* GHTableCellDelegate.swift */; };
+		OBJ_67 /* GHGenericSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* GHGenericSectionTableViewController.swift */; };
+		OBJ_68 /* GHColorExtesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* GHColorExtesnion.swift */; };
+		OBJ_69 /* GHBaseViewModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* GHBaseViewModuleProtocol.swift */; };
+		OBJ_76 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_87 /* ghmjolnircoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ghmjolnircoreTests.swift */; };
+		OBJ_89 /* ghmjolnircore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		92339D2E279C97C0005DE201 /* PBXContainerItemProxy */ = {
+		92339D70279C9886005DE201 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 92339D19279C97C0005DE201 /* Project object */;
+			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 92339D21279C97C0005DE201;
+			remoteGlobalIDString = "ghmjolnircore::ghmjolnircore";
 			remoteInfo = ghmjolnircore;
+		};
+		92339D71279C9886005DE201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ghmjolnircore::ghmjolnircoreTests";
+			remoteInfo = ghmjolnircoreTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		92339D22279C97C0005DE201 /* ghmjolnircore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ghmjolnircore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		92339D25279C97C0005DE201 /* ghmjolnircore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ghmjolnircore.h; sourceTree = "<group>"; };
-		92339D26279C97C0005DE201 /* ghmjolnircore.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ghmjolnircore.docc; sourceTree = "<group>"; };
-		92339D2C279C97C0005DE201 /* ghmjolnircoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ghmjolnircoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92339D31279C97C0005DE201 /* ghmjolnircoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghmjolnircoreTests.swift; sourceTree = "<group>"; };
+		OBJ_11 /* GHLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHLiveData.swift; sourceTree = "<group>"; };
+		OBJ_13 /* GHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewController.swift; sourceTree = "<group>"; };
+		OBJ_14 /* GHBundleParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBundleParameters.swift; sourceTree = "<group>"; };
+		OBJ_15 /* GHManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHManagerController.swift; sourceTree = "<group>"; };
+		OBJ_17 /* GHNavigationControllerExtesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHNavigationControllerExtesnion.swift; sourceTree = "<group>"; };
+		OBJ_19 /* GHBaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewControllerDelegate.swift; sourceTree = "<group>"; };
+		OBJ_21 /* GHCacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCacheImage.swift; sourceTree = "<group>"; };
+		OBJ_23 /* GHCacheImageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCacheImageDelegate.swift; sourceTree = "<group>"; };
+		OBJ_28 /* GHGenericCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGenericCollectionViewController.swift; sourceTree = "<group>"; };
+		OBJ_31 /* GHModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHModelDelegate.swift; sourceTree = "<group>"; };
+		OBJ_33 /* GHCollectionCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCollectionCellDelegate.swift; sourceTree = "<group>"; };
+		OBJ_35 /* GHTableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTableCellDelegate.swift; sourceTree = "<group>"; };
+		OBJ_38 /* GHGenericSectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGenericSectionTableViewController.swift; sourceTree = "<group>"; };
+		OBJ_40 /* GHColorExtesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHColorExtesnion.swift; sourceTree = "<group>"; };
+		OBJ_42 /* GHBaseViewModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewModuleProtocol.swift; sourceTree = "<group>"; };
+		OBJ_45 /* ghmjolnircoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghmjolnircoreTests.swift; sourceTree = "<group>"; };
+		OBJ_49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* ghmjolnircore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ghmjolnircore.h; sourceTree = "<group>"; };
+		"ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ghmjolnircore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ghmjolnircore::ghmjolnircoreTests::Product" /* ghmjolnircoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghmjolnircoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		92339D1F279C97C0005DE201 /* Frameworks */ = {
+		OBJ_70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92339D29279C97C0005DE201 /* Frameworks */ = {
+		OBJ_88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				92339D2D279C97C0005DE201 /* ghmjolnircore.framework in Frameworks */,
+				OBJ_89 /* ghmjolnircore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		92339D18279C97C0005DE201 = {
+		OBJ_10 /* liveData */ = {
 			isa = PBXGroup;
 			children = (
-				92339D24279C97C0005DE201 /* ghmjolnircore */,
-				92339D30279C97C0005DE201 /* ghmjolnircoreTests */,
-				92339D23279C97C0005DE201 /* Products */,
+				OBJ_11 /* GHLiveData.swift */,
 			);
+			path = liveData;
 			sourceTree = "<group>";
 		};
-		92339D23279C97C0005DE201 /* Products */ = {
+		OBJ_12 /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				92339D22279C97C0005DE201 /* ghmjolnircore.framework */,
-				92339D2C279C97C0005DE201 /* ghmjolnircoreTests.xctest */,
+				OBJ_13 /* GHBaseViewController.swift */,
+				OBJ_14 /* GHBundleParameters.swift */,
+				OBJ_15 /* GHManagerController.swift */,
+				OBJ_16 /* extension */,
+				OBJ_18 /* protocol */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* GHNavigationControllerExtesnion.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* GHBaseViewControllerDelegate.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		OBJ_20 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* GHCacheImage.swift */,
+				OBJ_22 /* protocol */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		OBJ_22 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* GHCacheImageDelegate.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		OBJ_24 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* list */,
+				OBJ_39 /* extension */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* protocol */,
+				OBJ_26 /* collection */,
+				OBJ_36 /* table */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* controller */,
+			);
+			path = collection;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* GHGenericCollectionViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		OBJ_29 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* cell */,
+				OBJ_32 /* modelCollection */,
+				OBJ_34 /* modelTable */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		OBJ_30 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_31 /* GHModelDelegate.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* modelCollection */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* GHCollectionCellDelegate.swift */,
+			);
+			path = modelCollection;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* modelTable */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* GHTableCellDelegate.swift */,
+			);
+			path = modelTable;
+			sourceTree = "<group>";
+		};
+		OBJ_36 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_37 /* controller */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
+		OBJ_37 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* GHGenericSectionTableViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		OBJ_39 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_40 /* GHColorExtesnion.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		OBJ_41 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* GHBaseViewModuleProtocol.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		OBJ_43 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_44 /* ghmjolnircoreTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_44 /* ghmjolnircoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* ghmjolnircoreTests.swift */,
+			);
+			name = ghmjolnircoreTests;
+			path = Tests/ghmjolnircoreTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */,
+				"ghmjolnircore::ghmjolnircoreTests::Product" /* ghmjolnircoreTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		92339D24279C97C0005DE201 /* ghmjolnircore */ = {
+		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				92339D25279C97C0005DE201 /* ghmjolnircore.h */,
-				92339D26279C97C0005DE201 /* ghmjolnircore.docc */,
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_43 /* Tests */,
+				OBJ_46 /* Products */,
+				OBJ_49 /* README.md */,
 			);
-			path = ghmjolnircore;
+			name = "";
 			sourceTree = "<group>";
 		};
-		92339D30279C97C0005DE201 /* ghmjolnircoreTests */ = {
+		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92339D31279C97C0005DE201 /* ghmjolnircoreTests.swift */,
+				OBJ_8 /* ghmjolnircore */,
 			);
-			path = ghmjolnircoreTests;
-			sourceTree = "<group>";
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* ghmjolnircore */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* ghmjolnircore.h */,
+				OBJ_10 /* liveData */,
+				OBJ_12 /* manager */,
+				OBJ_20 /* tool */,
+				OBJ_24 /* ui */,
+				OBJ_41 /* viewModel */,
+			);
+			name = ghmjolnircore;
+			path = Sources/ghmjolnircore;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		92339D1D279C97C0005DE201 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				92339D33279C97C0005DE201 /* ghmjolnircore.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		92339D21279C97C0005DE201 /* ghmjolnircore */ = {
+		"ghmjolnircore::SwiftPMPackageDescription" /* ghmjolnircorePackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92339D36279C97C0005DE201 /* Build configuration list for PBXNativeTarget "ghmjolnircore" */;
+			buildConfigurationList = OBJ_72 /* Build configuration list for PBXNativeTarget "ghmjolnircorePackageDescription" */;
 			buildPhases = (
-				92339D1D279C97C0005DE201 /* Headers */,
-				92339D1E279C97C0005DE201 /* Sources */,
-				92339D1F279C97C0005DE201 /* Frameworks */,
-				92339D20279C97C0005DE201 /* Resources */,
+				OBJ_75 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ghmjolnircorePackageDescription;
+			productName = ghmjolnircorePackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"ghmjolnircore::ghmjolnircore" /* ghmjolnircore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "ghmjolnircore" */;
+			buildPhases = (
+				OBJ_54 /* Sources */,
+				OBJ_70 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,350 +345,356 @@
 			);
 			name = ghmjolnircore;
 			productName = ghmjolnircore;
-			productReference = 92339D22279C97C0005DE201 /* ghmjolnircore.framework */;
+			productReference = "ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		92339D2B279C97C0005DE201 /* ghmjolnircoreTests */ = {
+		"ghmjolnircore::ghmjolnircoreTests" /* ghmjolnircoreTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92339D39279C97C0005DE201 /* Build configuration list for PBXNativeTarget "ghmjolnircoreTests" */;
+			buildConfigurationList = OBJ_83 /* Build configuration list for PBXNativeTarget "ghmjolnircoreTests" */;
 			buildPhases = (
-				92339D28279C97C0005DE201 /* Sources */,
-				92339D29279C97C0005DE201 /* Frameworks */,
-				92339D2A279C97C0005DE201 /* Resources */,
+				OBJ_86 /* Sources */,
+				OBJ_88 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				92339D2F279C97C0005DE201 /* PBXTargetDependency */,
+				OBJ_90 /* PBXTargetDependency */,
 			);
 			name = ghmjolnircoreTests;
 			productName = ghmjolnircoreTests;
-			productReference = 92339D2C279C97C0005DE201 /* ghmjolnircoreTests.xctest */;
+			productReference = "ghmjolnircore::ghmjolnircoreTests::Product" /* ghmjolnircoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		92339D19279C97C0005DE201 /* Project object */ = {
+		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
-				TargetAttributes = {
-					92339D21279C97C0005DE201 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
-					92339D2B279C97C0005DE201 = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
-				};
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
 			};
-			buildConfigurationList = 92339D1C279C97C0005DE201 /* Build configuration list for PBXProject "ghmjolnircore" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "ghmjolnircore" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 92339D18279C97C0005DE201;
-			productRefGroup = 92339D23279C97C0005DE201 /* Products */;
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92339D21279C97C0005DE201 /* ghmjolnircore */,
-				92339D2B279C97C0005DE201 /* ghmjolnircoreTests */,
+				"ghmjolnircore::ghmjolnircore" /* ghmjolnircore */,
+				"ghmjolnircore::SwiftPMPackageDescription" /* ghmjolnircorePackageDescription */,
+				"ghmjolnircore::ghmjolnircorePackageTests::ProductTarget" /* ghmjolnircorePackageTests */,
+				"ghmjolnircore::ghmjolnircoreTests" /* ghmjolnircoreTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		92339D20279C97C0005DE201 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92339D2A279C97C0005DE201 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		92339D1E279C97C0005DE201 /* Sources */ = {
+		OBJ_54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				92339D27279C97C0005DE201 /* ghmjolnircore.docc in Sources */,
+				OBJ_55 /* GHLiveData.swift in Sources */,
+				OBJ_56 /* GHBaseViewController.swift in Sources */,
+				OBJ_57 /* GHBundleParameters.swift in Sources */,
+				OBJ_58 /* GHManagerController.swift in Sources */,
+				OBJ_59 /* GHNavigationControllerExtesnion.swift in Sources */,
+				OBJ_60 /* GHBaseViewControllerDelegate.swift in Sources */,
+				OBJ_61 /* GHCacheImage.swift in Sources */,
+				OBJ_62 /* GHCacheImageDelegate.swift in Sources */,
+				OBJ_63 /* GHGenericCollectionViewController.swift in Sources */,
+				OBJ_64 /* GHModelDelegate.swift in Sources */,
+				OBJ_65 /* GHCollectionCellDelegate.swift in Sources */,
+				OBJ_66 /* GHTableCellDelegate.swift in Sources */,
+				OBJ_67 /* GHGenericSectionTableViewController.swift in Sources */,
+				OBJ_68 /* GHColorExtesnion.swift in Sources */,
+				OBJ_69 /* GHBaseViewModuleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92339D28279C97C0005DE201 /* Sources */ = {
+		OBJ_75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 0;
 			files = (
-				92339D32279C97C0005DE201 /* ghmjolnircoreTests.swift in Sources */,
+				OBJ_76 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_87 /* ghmjolnircoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		92339D2F279C97C0005DE201 /* PBXTargetDependency */ = {
+		OBJ_81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 92339D21279C97C0005DE201 /* ghmjolnircore */;
-			targetProxy = 92339D2E279C97C0005DE201 /* PBXContainerItemProxy */;
+			target = "ghmjolnircore::ghmjolnircoreTests" /* ghmjolnircoreTests */;
+			targetProxy = 92339D71279C9886005DE201 /* PBXContainerItemProxy */;
+		};
+		OBJ_90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ghmjolnircore::ghmjolnircore" /* ghmjolnircore */;
+			targetProxy = 92339D70279C9886005DE201 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		92339D34279C97C0005DE201 /* Debug */ = {
+		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
-					"$(inherited)",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
-		92339D35279C97C0005DE201 /* Release */ = {
+		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		92339D37279C97C0005DE201 /* Debug */ = {
+		OBJ_52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K36NPWS843;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.gipsyhub.ghmjolnircore;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircore_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ghmjolnircore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = ghmjolnircore;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		92339D38279C97C0005DE201 /* Release */ = {
+		OBJ_53 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = K36NPWS843;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.gipsyhub.ghmjolnircore;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircore_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ghmjolnircore;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_NAME = ghmjolnircore;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
-		92339D3A279C97C0005DE201 /* Debug */ = {
+		OBJ_73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K36NPWS843;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.gipsyhub.ghmjolnircoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -package-description-version 5.5.0";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		92339D3B279C97C0005DE201 /* Release */ = {
+		OBJ_74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K36NPWS843;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.gipsyhub.ghmjolnircoreTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -package-description-version 5.5.0";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		OBJ_79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircoreTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ghmjolnircoreTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircoreTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = ghmjolnircoreTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		92339D1C279C97C0005DE201 /* Build configuration list for PBXProject "ghmjolnircore" */ = {
+		OBJ_2 /* Build configuration list for PBXProject "ghmjolnircore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92339D34279C97C0005DE201 /* Debug */,
-				92339D35279C97C0005DE201 /* Release */,
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92339D36279C97C0005DE201 /* Build configuration list for PBXNativeTarget "ghmjolnircore" */ = {
+		OBJ_51 /* Build configuration list for PBXNativeTarget "ghmjolnircore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92339D37279C97C0005DE201 /* Debug */,
-				92339D38279C97C0005DE201 /* Release */,
+				OBJ_52 /* Debug */,
+				OBJ_53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92339D39279C97C0005DE201 /* Build configuration list for PBXNativeTarget "ghmjolnircoreTests" */ = {
+		OBJ_72 /* Build configuration list for PBXNativeTarget "ghmjolnircorePackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92339D3A279C97C0005DE201 /* Debug */,
-				92339D3B279C97C0005DE201 /* Release */,
+				OBJ_73 /* Debug */,
+				OBJ_74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_78 /* Build configuration list for PBXAggregateTarget "ghmjolnircorePackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_79 /* Debug */,
+				OBJ_80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_83 /* Build configuration list for PBXNativeTarget "ghmjolnircoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_84 /* Debug */,
+				OBJ_85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 92339D19279C97C0005DE201 /* Project object */;
+	rootObject = OBJ_1 /* Project object */;
 }
