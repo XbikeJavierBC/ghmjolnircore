@@ -19,11 +19,11 @@ public protocol GHBaseViewControllerDelegate: AnyObject {
 }
 
 extension GHBaseViewControllerDelegate where Self: UIViewController {
-    public static func instantiate(fromStoryboard nibName: String, bundle: Bundle = .main) -> Self {
+    public static func instantiate(fromStoryboard nibName: String, bundle: Bundle = .main) -> UIViewController {
         let id = String(describing: self)
         let storyboard = UIStoryboard(name: nibName, bundle: bundle)
         let controller = storyboard.instantiateViewController(withIdentifier: id)
-        return controller as! Self
+        return controller
     }
     
     public func removeReferenceContext() {
