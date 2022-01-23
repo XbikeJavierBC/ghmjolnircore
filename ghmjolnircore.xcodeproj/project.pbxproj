@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		92339D77279CB506005DE201 /* GHViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339D76279CB506005DE201 /* GHViewExtension.swift */; };
+		92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339E3B279D4633005DE201 /* GHModuleBundle.swift */; };
 		OBJ_55 /* GHLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GHLiveData.swift */; };
 		OBJ_56 /* GHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GHBaseViewController.swift */; };
 		OBJ_57 /* GHBundleParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GHBundleParameters.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		92339D76279CB506005DE201 /* GHViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHViewExtension.swift; sourceTree = "<group>"; };
+		92339E3B279D4633005DE201 /* GHModuleBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHModuleBundle.swift; sourceTree = "<group>"; };
 		OBJ_11 /* GHLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHLiveData.swift; sourceTree = "<group>"; };
 		OBJ_13 /* GHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewController.swift; sourceTree = "<group>"; };
 		OBJ_14 /* GHBundleParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBundleParameters.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			children = (
 				OBJ_21 /* GHCacheImage.swift */,
 				OBJ_22 /* protocol */,
+				92339E3B279D4633005DE201 /* GHModuleBundle.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -275,7 +278,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -284,7 +287,6 @@
 				OBJ_46 /* Products */,
 				OBJ_49 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -376,7 +378,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_46 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,6 +406,7 @@
 				92339D77279CB506005DE201 /* GHViewExtension.swift in Sources */,
 				OBJ_62 /* GHCacheImageDelegate.swift in Sources */,
 				OBJ_63 /* GHGenericCollectionViewController.swift in Sources */,
+				92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */,
 				OBJ_64 /* GHModelDelegate.swift in Sources */,
 				OBJ_65 /* GHCollectionCellDelegate.swift in Sources */,
 				OBJ_66 /* GHTableCellDelegate.swift in Sources */,
