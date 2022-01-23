@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class GHBaseViewController: UIViewController, GHBaseViewControllerDelegate {
+internal class GHBaseViewController: UIViewController, GHBaseViewControllerDelegate {
     public var bundle: GHBundleParameters?
     public var controllerType: Int?
     public var viewModel: GHBaseViewModelProtocol?
