@@ -9,6 +9,7 @@ import UIKit
 
 public protocol GHBaseViewControllerDelegate: AnyObject {
     var bundle: GHBundleParameters? { get set }
+    var controllerType: Int? { get set }
     var controllerManager: GHManagerController? { get set }
     var viewModel: GHBaseViewModelProtocol? { get set }
     
@@ -27,7 +28,8 @@ extension GHBaseViewControllerDelegate where Self: UIViewController {
     
     public func removeReferenceContext() {
         self.bundle             = nil
-        self.controllerManager  = nil
         self.viewModel          = nil
+        self.controllerType     = nil
+        self.controllerManager  = nil
     }
 }

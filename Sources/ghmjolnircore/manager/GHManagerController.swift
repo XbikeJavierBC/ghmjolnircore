@@ -9,7 +9,7 @@ import UIKit
 
 public class GHManagerController {
     private var navigationController: UINavigationController?
-    private lazy var viewControllers: [GHBaseViewControllerDelegate?] = []
+    private lazy var viewControllers: [(type: Int, ctrDel: GHBaseViewControllerDelegate?)] = []
     
     public init(navBar: UINavigationController?) {
         self.navigationController = navBar
@@ -21,7 +21,7 @@ public class GHManagerController {
     
     public func hideViewController(animated: Bool = true, completion: (() -> Void)? = nil) {
         if let item = self.getLastVcPresented() {
-            if let controller = item as? UIViewController {
+            if let controller = item.ctrDel as? UIViewController {
                 if controller.navigationController == nil {
                     controller.dismiss(
                         animated: animated,
@@ -35,7 +35,8 @@ public class GHManagerController {
                     )
                 }
             }
-            self.releaseVcFromName(name: item)
+            
+            self.releaseVcFromName(type: item.type)
         }
     }
     
@@ -43,12 +44,12 @@ public class GHManagerController {
         if let index = self.viewControllers.firstIndex(where: { type(of: $0) == type(of: controller) }) {
             for (indexCtrl, element) in self.viewControllers.enumerated() {
                 if indexCtrl > index {
-                    self.releaseVcFromName(name: element)
+                    self.releaseVcFromName(type: element.type)
                 }
             }
         }
         
-        if let contrll = self.viewControllers.last, let uiController = contrll as? UIViewController {
+        if let contrll = self.viewControllers.last, let uiController = contrll.ctrDel as? UIViewController {
             self.navigationController?.popToViewController(
                 viewController: uiController,
                 animated: true
@@ -56,29 +57,41 @@ public class GHManagerController {
         }
     }
     
-    public func presentRootNavigationViewController(controller: GHBaseViewControllerDelegate,
-                                             bundle: GHBundleParameters? = nil) {
-        self.viewControllers.forEach { self.releaseVcFromName(name: $0) }
+    public func presentRootNavigationViewController(
+        type: Int,
+        controller: GHBaseViewControllerDelegate,
+        bundle: GHBundleParameters? = nil,
+        viewModel: GHBaseViewModelProtocol? = nil,
+        completion: (() -> Void)? = nil
+    ) {
+        self.viewControllers.forEach { self.releaseVcFromName(type: $0.type) }
         
         self.presentNavigationViewController(
+            type: type,
             controller: controller,
-            bundle: bundle
+            bundle: bundle,
+            viewModel: viewModel,
+            completion: completion
         )
     }
     
-    public func presentNavigationViewController(controller: GHBaseViewControllerDelegate,
-                                         bundle: GHBundleParameters? = nil,
-                                         viewModel: GHBaseViewModelProtocol? = nil,
-                                         completion: (() -> Void)? = nil) {
-        if self.viewControllers.firstIndex(where: { type(of: $0) == type(of: controller) }) == nil {
+    public func presentNavigationViewController(
+        type: Int,
+        controller: GHBaseViewControllerDelegate,
+        bundle: GHBundleParameters? = nil,
+        viewModel: GHBaseViewModelProtocol? = nil,
+        completion: (() -> Void)? = nil
+    ) {
+        if self.viewControllers.firstIndex(where: { $0.type == type }) == nil {
             self.addControllerToList(
+                type: type,
                 controller: controller,
                 bundle: bundle,
                 viewModel: viewModel
             )
         }
         
-        if let contrll = self.getLastVcPresented() as? UIViewController {
+        if let contrll = self.getLastVcPresented()?.ctrDel as? UIViewController {
             self.navigationController?.pushViewController(
                 viewController: contrll,
                 animated: true,
@@ -87,20 +100,22 @@ public class GHManagerController {
         }
     }
     
-    public func presentPopUpViewController(controller: GHBaseViewControllerDelegate,
-                                    bundle: GHBundleParameters? = nil,
-                                    viewModel: GHBaseViewModelProtocol? = nil,
-                                    completion: (() -> Void)? = nil) {
-        if self.viewControllers.firstIndex(where: { type(of: $0) == type(of: controller) }) == nil {
+    public func presentPopUpViewController(type: Int,
+                                           controller: GHBaseViewControllerDelegate,
+                                           bundle: GHBundleParameters? = nil,
+                                           viewModel: GHBaseViewModelProtocol? = nil,
+                                           completion: (() -> Void)? = nil) {
+        if self.viewControllers.firstIndex(where: { $0.type == type }) == nil {
             self.addControllerToList(
+                type: type,
                 controller: controller,
                 bundle: bundle,
                 viewModel: viewModel
             )
         }
         
-        if let contrll = self.getLastVcPresented() as? UIViewController,
-            let penContrll = self.getPenultimateVcPresented() as? UIViewController {
+        if let contrll = self.getLastVcPresented()?.ctrDel as? UIViewController,
+           let penContrll = self.getPenultimateVcPresented()?.ctrDel as? UIViewController {
             contrll.modalPresentationStyle  = .fullScreen
             contrll.modalPresentationStyle  = .overCurrentContext
             contrll.modalTransitionStyle    = .crossDissolve
@@ -112,17 +127,21 @@ public class GHManagerController {
         }
     }
     
-    private func addControllerToList(controller: GHBaseViewControllerDelegate,
-                                     bundle: GHBundleParameters?,
-                                     viewModel: GHBaseViewModelProtocol?) {
+    private func addControllerToList(
+        type: Int,
+        controller: GHBaseViewControllerDelegate,
+        bundle: GHBundleParameters?,
+        viewModel: GHBaseViewModelProtocol?
+    ) {
         controller.bundle             = bundle
-        controller.controllerManager  = self
+        controller.controllerType     = type
         controller.viewModel          = viewModel
+        controller.controllerManager  = self
         
-        self.viewControllers.append(controller)
+        self.viewControllers.append((type: type, ctrDel: controller))
     }
     
-    private func getLastVcPresented() -> GHBaseViewControllerDelegate? {
+    private func getLastVcPresented() -> (type: Int, ctrDel: GHBaseViewControllerDelegate?)? {
         guard let controller = self.viewControllers.last else {
             return nil
         }
@@ -130,7 +149,7 @@ public class GHManagerController {
         return controller
     }
     
-    private func getPenultimateVcPresented() -> GHBaseViewControllerDelegate? {
+    private func getPenultimateVcPresented() -> (type: Int, ctrDel: GHBaseViewControllerDelegate?)? {
         if self.viewControllers.count > 1 {
             return self.viewControllers[self.viewControllers.count - 2]
         }
@@ -138,10 +157,10 @@ public class GHManagerController {
         return nil
     }
     
-    private func releaseVcFromName(name: GHBaseViewControllerDelegate?) {
-        self.viewControllers.filter { type(of: $0) == type(of: name) }.first??.removeReferenceContext()
+    private func releaseVcFromName(type: Int) {
+        self.viewControllers.filter { $0.type == type }.first?.ctrDel?.removeReferenceContext()
         
-        if let index = self.viewControllers.firstIndex(where: { type(of: $0) == type(of: name) }) {
+        if let index = self.viewControllers.firstIndex(where: { $0.type == type }) {
             self.viewControllers.remove(at: index)
         }
     }

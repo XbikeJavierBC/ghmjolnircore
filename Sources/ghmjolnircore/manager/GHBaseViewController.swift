@@ -9,6 +9,7 @@ import UIKit
 
 open class GHBaseViewController: UIViewController, GHBaseViewControllerDelegate {
     public var bundle: GHBundleParameters?
-    public var controllerManager: GHManagerController?
+    public var controllerType: Int?
     public var viewModel: GHBaseViewModelProtocol?
+    public var controllerManager: GHManagerController?
 }
