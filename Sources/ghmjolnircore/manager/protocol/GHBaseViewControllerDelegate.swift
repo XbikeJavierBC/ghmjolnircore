@@ -13,7 +13,7 @@ public protocol GHBaseViewControllerDelegate: AnyObject {
     var controllerManager: GHManagerController? { get set }
     var viewModel: GHBaseViewModelProtocol? { get set }
     
-    static func instantiate(fromStoryboard nibName: String, bundle: Bundle) -> Self
+    static func instantiate(fromStoryboard nibName: String, bundle: Bundle) -> UIViewController
     
     func removeReferenceContext()
 }
