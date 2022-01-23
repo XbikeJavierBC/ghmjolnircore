@@ -13,15 +13,15 @@ public protocol GHBaseViewControllerDelegate: AnyObject {
     var controllerManager: GHManagerController? { get set }
     var viewModel: GHBaseViewModelProtocol? { get set }
     
-    static func instantiate(fromStoryboard nibName: String) -> Self
+    static func instantiate(fromStoryboard nibName: String, bundle: Bundle) -> Self
     
     func removeReferenceContext()
 }
 
 extension GHBaseViewControllerDelegate where Self: UIViewController {
-    public static func instantiate(fromStoryboard nibName: String) -> Self {
+    public static func instantiate(fromStoryboard nibName: String, bundle: Bundle = .main) -> Self {
         let id = String(describing: self)
-        let storyboard = UIStoryboard(name: nibName, bundle: .main)
+        let storyboard = UIStoryboard(name: nibName, bundle: bundle)
         let controller = storyboard.instantiateViewController(withIdentifier: id)
         return controller as! Self
     }

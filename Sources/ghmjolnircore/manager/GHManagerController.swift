@@ -132,7 +132,7 @@ public class GHManagerController {
         controller: GHBaseViewControllerDelegate,
         bundle: GHBundleParameters?,
         viewModel: GHBaseViewModelProtocol?
-    ) {
+    ) { 
         controller.bundle             = bundle
         controller.controllerType     = type
         controller.viewModel          = viewModel
