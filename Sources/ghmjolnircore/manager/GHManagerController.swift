@@ -59,8 +59,8 @@ public class GHManagerController {
     
     public func presentRootNavigationViewController(
         managerModel: GHManagerModel,
-        parameters: GHBundleParameters?,
-        completion: (() -> Void)?
+        parameters: GHBundleParameters? = nil,
+        completion: (() -> Void)? = nil
     ) {
         self.viewControllers.forEach { self.releaseVcFromName(type: $0.type) }
         
@@ -73,8 +73,8 @@ public class GHManagerController {
     
     public func presentNavigationViewController(
         managerModel: GHManagerModel,
-        parameters: GHBundleParameters?,
-        completion: (() -> Void)?
+        parameters: GHBundleParameters? = nil,
+        completion: (() -> Void)? = nil
     ) {
         if self.viewControllers.firstIndex(where: { $0.type == managerModel.type }) == nil {
             self.addControllerToList(
@@ -94,8 +94,8 @@ public class GHManagerController {
     
     public func presentPopUpViewController(
         managerModel: GHManagerModel,
-        parameters: GHBundleParameters?,
-        completion: (() -> Void)?
+        parameters: GHBundleParameters? = nil,
+        completion: (() -> Void)? = nil
     ) {
         if self.viewControllers.firstIndex(where: { $0.type == managerModel.type }) == nil {
             self.addControllerToList(
