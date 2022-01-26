@@ -57,18 +57,29 @@ public class GHManagerController {
         }
     }
     
-    public func presentRootNavigationViewController(managerModel: GHManagerModel) {
+    public func presentRootNavigationViewController(
+        managerModel: GHManagerModel,
+        parameters: GHBundleParameters?,
+        completion: (() -> Void)?
+    ) {
         self.viewControllers.forEach { self.releaseVcFromName(type: $0.type) }
         
         self.presentNavigationViewController(
-            managerModel: managerModel
+            managerModel: managerModel,
+            parameters: parameters,
+            completion: completion
         )
     }
     
-    public func presentNavigationViewController(managerModel: GHManagerModel) {
+    public func presentNavigationViewController(
+        managerModel: GHManagerModel,
+        parameters: GHBundleParameters?,
+        completion: (() -> Void)?
+    ) {
         if self.viewControllers.firstIndex(where: { $0.type == managerModel.type }) == nil {
             self.addControllerToList(
-                managerModel: managerModel
+                managerModel: managerModel,
+                parameters: parameters
             )
         }
         
@@ -76,15 +87,20 @@ public class GHManagerController {
             self.navigationController?.pushViewController(
                 viewController: contrll,
                 animated: true,
-                completion: managerModel.completion
+                completion: completion
             )
         }
     }
     
-    public func presentPopUpViewController(managerModel: GHManagerModel) {
+    public func presentPopUpViewController(
+        managerModel: GHManagerModel,
+        parameters: GHBundleParameters?,
+        completion: (() -> Void)?
+    ) {
         if self.viewControllers.firstIndex(where: { $0.type == managerModel.type }) == nil {
             self.addControllerToList(
-                managerModel: managerModel
+                managerModel: managerModel,
+                parameters: parameters
             )
         }
         
@@ -96,15 +112,18 @@ public class GHManagerController {
             penContrll.present(
                 contrll,
                 animated: true,
-                completion: managerModel.completion
+                completion: completion
             )
         }
     }
     
-    private func addControllerToList(managerModel: GHManagerModel) {
+    private func addControllerToList(
+        managerModel: GHManagerModel,
+        parameters: GHBundleParameters?
+    ) {
         guard let controller = managerModel.controller, let type = managerModel.type else { return }
         
-        controller.bundle             = managerModel.bundle
+        controller.bundle             = parameters
         controller.controllerType     = managerModel.type
         controller.viewModel          = managerModel.viewModel
         controller.controllerManager  = self

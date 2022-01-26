@@ -20,20 +20,20 @@ public class GHManagerModelBuilder {
         return self
     }
     
-    public func withBundle(bundle: GHBundleParameters?) -> GHManagerModelBuilder {
+    /*public func withBundle(bundle: GHBundleParameters?) -> GHManagerModelBuilder {
         self.managerModel.bundle = bundle
         return self
-    }
+    }*/
     
     public func withViewModel(viewModel: GHBaseViewModelProtocol) -> GHManagerModelBuilder {
         self.managerModel.viewModel = viewModel
         return self
     }
     
-    public func withCompletition(completion: (() -> Void)?) -> GHManagerModelBuilder {
+    /*public func withCompletition(completion: (() -> Void)?) -> GHManagerModelBuilder {
         self.managerModel.completion = completion
         return self
-    }
+    }*/
     
     public func withFindClass(findClass: AnyClass) -> GHManagerModelBuilder {
         self.managerModel.findClass = findClass
@@ -48,8 +48,8 @@ public class GHManagerModelBuilder {
 public class GHManagerModel {
     public var type: Int?
     public var controller: GHBaseViewControllerDelegate?
-    public var bundle: GHBundleParameters?
+    //public var bundle: GHBundleParameters?
     public var viewModel: GHBaseViewModelProtocol?
     public var findClass: AnyClass?
-    public var completion: (() -> Void)?
+    //public var completion: (() -> Void)?
 }
