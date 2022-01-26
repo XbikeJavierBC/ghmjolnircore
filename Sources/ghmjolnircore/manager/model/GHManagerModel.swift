@@ -35,6 +35,10 @@ public class GHManagerModelBuilder {
         return self
     }
     
+    public func withFindClass(findClass: AnyClass) -> GHManagerModelBuilder {
+        self.managerModel.findClass = findClass
+        return self
+    }
 
     public func build() -> GHManagerModel {
         return self.managerModel
@@ -46,5 +50,6 @@ public class GHManagerModel {
     public var controller: GHBaseViewControllerDelegate?
     public var bundle: GHBundleParameters?
     public var viewModel: GHBaseViewModelProtocol?
+    public var findClass: AnyClass?
     public var completion: (() -> Void)?
 }
