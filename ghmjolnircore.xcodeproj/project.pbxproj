@@ -23,8 +23,8 @@
 /* Begin PBXBuildFile section */
 		92339D77279CB506005DE201 /* GHViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339D76279CB506005DE201 /* GHViewExtension.swift */; };
 		92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339E3B279D4633005DE201 /* GHModuleBundle.swift */; };
+		92803C0427A107280059660F /* GHManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92803C0327A107280059660F /* GHManagerModel.swift */; };
 		OBJ_55 /* GHLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GHLiveData.swift */; };
-		OBJ_56 /* GHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GHBaseViewController.swift */; };
 		OBJ_57 /* GHBundleParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GHBundleParameters.swift */; };
 		OBJ_58 /* GHManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GHManagerController.swift */; };
 		OBJ_59 /* GHNavigationControllerExtesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GHNavigationControllerExtesnion.swift */; };
@@ -63,8 +63,8 @@
 /* Begin PBXFileReference section */
 		92339D76279CB506005DE201 /* GHViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHViewExtension.swift; sourceTree = "<group>"; };
 		92339E3B279D4633005DE201 /* GHModuleBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHModuleBundle.swift; sourceTree = "<group>"; };
+		92803C0327A107280059660F /* GHManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHManagerModel.swift; sourceTree = "<group>"; };
 		OBJ_11 /* GHLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHLiveData.swift; sourceTree = "<group>"; };
-		OBJ_13 /* GHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewController.swift; sourceTree = "<group>"; };
 		OBJ_14 /* GHBundleParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBundleParameters.swift; sourceTree = "<group>"; };
 		OBJ_15 /* GHManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHManagerController.swift; sourceTree = "<group>"; };
 		OBJ_17 /* GHNavigationControllerExtesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHNavigationControllerExtesnion.swift; sourceTree = "<group>"; };
@@ -115,6 +115,14 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
+		92803C0227A106CD0059660F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				92803C0327A107280059660F /* GHManagerModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* liveData */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +134,7 @@
 		OBJ_12 /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* GHBaseViewController.swift */,
+				92803C0227A106CD0059660F /* model */,
 				OBJ_14 /* GHBundleParameters.swift */,
 				OBJ_15 /* GHManagerController.swift */,
 				OBJ_18 /* protocol */,
@@ -145,9 +153,9 @@
 		OBJ_20 /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				92339E3B279D4633005DE201 /* GHModuleBundle.swift */,
 				OBJ_21 /* GHCacheImage.swift */,
 				OBJ_22 /* protocol */,
-				92339E3B279D4633005DE201 /* GHModuleBundle.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -397,7 +405,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_55 /* GHLiveData.swift in Sources */,
-				OBJ_56 /* GHBaseViewController.swift in Sources */,
 				OBJ_57 /* GHBundleParameters.swift in Sources */,
 				OBJ_58 /* GHManagerController.swift in Sources */,
 				OBJ_59 /* GHNavigationControllerExtesnion.swift in Sources */,
@@ -408,6 +415,7 @@
 				OBJ_63 /* GHGenericCollectionViewController.swift in Sources */,
 				92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */,
 				OBJ_64 /* GHModelDelegate.swift in Sources */,
+				92803C0427A107280059660F /* GHManagerModel.swift in Sources */,
 				OBJ_65 /* GHCollectionCellDelegate.swift in Sources */,
 				OBJ_66 /* GHTableCellDelegate.swift in Sources */,
 				OBJ_67 /* GHGenericSectionTableViewController.swift in Sources */,
