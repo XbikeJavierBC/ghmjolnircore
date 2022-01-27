@@ -9,6 +9,10 @@ public class GHBundleParameters {
     /// Para pasar los parametros entre views controllers.
     fileprivate lazy var _params: [String : Any?] = [:]
     
+    public init() {
+        
+    }
+    
     /**
      Agrega un valor para pasar entre viewscontrollers.
      - parameters:
