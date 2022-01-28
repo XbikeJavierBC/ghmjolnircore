@@ -62,7 +62,7 @@ public class GHGenericSectionTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = 50.0
+        self.tableView.estimatedRowHeight = 10.0
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
