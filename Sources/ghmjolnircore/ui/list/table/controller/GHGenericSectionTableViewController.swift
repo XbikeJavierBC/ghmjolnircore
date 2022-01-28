@@ -60,11 +60,11 @@ public class GHGenericSectionTableViewController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: GHTableViewCellDelegate?
+        var cell: GHSimpleTableViewCellDelegate?
         
         if let data = self.filteredListSource?[indexPath.section] {
             cell = data.cellForTableView(tableView: tableView, atIndexPath: indexPath)
-            cell?.bind(model: data, delegate: self.collectionDelegate)
+            cell?.bind(model: data)
         }
         
         guard let cell = cell as? UITableViewCell else {

@@ -17,7 +17,7 @@ public protocol GHModelTableDelegate {
     func cellForTableView(
         tableView: UITableView,
         atIndexPath: IndexPath
-    ) -> GHTableViewCellDelegate?
+    ) -> GHSimpleTableViewCellDelegate?
 }
 
 public extension GHModelTableDelegate {
@@ -41,11 +41,11 @@ public extension GHModelTableDelegate {
     func cellForTableView(
         tableView: UITableView,
         atIndexPath: IndexPath
-    ) -> GHTableViewCellDelegate? {
+    ) -> GHSimpleTableViewCellDelegate? {
         var cell = tableView.dequeueReusableCell(
             withIdentifier: self.reuseIdentifier,
             for: atIndexPath
-        ) as? GHTableViewCellDelegate
+        ) as? GHSimpleTableViewCellDelegate
         
         if cell == nil {
             let nib = self.bundle?.loadNibNamed(
@@ -53,7 +53,7 @@ public extension GHModelTableDelegate {
                 owner: tableView,
                 options: nil
             )
-            cell = nib?[0] as? GHTableViewCellDelegate
+            cell = nib?[0] as? GHSimpleTableViewCellDelegate
         }
         
         return cell
