@@ -22,7 +22,12 @@ public protocol GHModelTableDelegate {
 
 public extension GHModelTableDelegate {
     var titleSection: String? {
-        nil
+        get {
+            nil
+        }
+        set {
+            
+        }
     }
     
     var heightForRow: CGFloat {
