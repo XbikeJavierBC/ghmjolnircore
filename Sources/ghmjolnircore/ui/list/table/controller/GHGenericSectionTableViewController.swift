@@ -27,6 +27,16 @@ public class GHGenericSectionTableViewController: UITableViewController {
     private var heightForHeader: CGFloat = 0.0
     private var doingScroll = false
     
+    public init(nibList: [(String, Bundle)]) {
+        super.init(style: .plain)
+        
+        self.nibList = nibList
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -139,10 +149,6 @@ public class GHGenericSectionTableViewController: UITableViewController {
     }
     
     //MARK: GENERIC FUNCTION
-    public func setRegisterNibList(nibList: [(String, Bundle)]) {
-        self.nibList = nibList
-    }
-    
     public func setSectionView(heightSection: CGFloat, viewSection: @escaping ViewListener) {
         self.heightForHeader = heightSection
         self.customView = viewSection
