@@ -121,11 +121,11 @@ public class GHManagerController {
         managerModel: GHManagerModel,
         parameters: GHBundleParameters?
     ) {
-        guard let controller = managerModel.controller, let type = managerModel.type else { return }
+        guard let controller = managerModel.delegate?.getController(), let type = managerModel.type else { return }
         
         controller.bundle             = parameters
         controller.controllerType     = managerModel.type
-        controller.viewModel          = managerModel.viewModel
+        controller.viewModel          = managerModel.delegate?.getViewModel()
         controller.controllerManager  = self
         
         self.viewControllers.append(
