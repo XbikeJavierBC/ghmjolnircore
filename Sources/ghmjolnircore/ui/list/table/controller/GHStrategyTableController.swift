@@ -7,25 +7,20 @@
 
 import UIKit
 
-public protocol GHGenericSectionTableViewControllerDelegate: AnyObject {
+public protocol GHStrategyTableControllerDelegate: AnyObject {
     func itemSelected(model: GHModelTableDelegate)
 }
 
-public class GHGenericSectionTableViewController: UITableViewController {
-    public weak var collectionDelegate: GHGenericCollectionViewControllerDelegate?
-    public weak var delegate: GHGenericSectionTableViewControllerDelegate?
-    
+public class GHStrategyTableController: UITableViewController {
     internal var listSource: [GHModelTableDelegate]?
     internal var filteredListSource: [GHModelTableDelegate]?
     
-    public typealias ViewListener = (String) -> UIView?
     private var customView: ViewListener?
-    
+    private var heightForHeader: CGFloat = 0.0
     private lazy var nibList: [(nibName: String, bundle: Bundle)] = []
     
-    private lazy var dcViewHeaders: [String: UIView] = [:]
-    private var heightForHeader: CGFloat = 0.0
-    private var doingScroll = false
+    public typealias ViewListener = (String) -> UIView?
+    public weak var delegate: GHStrategyTableControllerDelegate?
     
     public init(nibList: [(String, Bundle)]) {
         super.init(style: .plain)
@@ -40,9 +35,9 @@ public class GHGenericSectionTableViewController: UITableViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nibList.forEach { element in
-            let nib = UINib(nibName: element.nibName, bundle: element.bundle)
-            self.tableView.register(nib, forCellReuseIdentifier: element.nibName)
+        self.nibList.forEach {
+            let nib = UINib(nibName: $0.nibName, bundle: $0.bundle)
+            self.tableView.register(nib, forCellReuseIdentifier: $0.nibName)
         }
         
         self.tableView.backgroundColor = .clear
@@ -62,7 +57,7 @@ public class GHGenericSectionTableViewController: UITableViewController {
         self.tableView.tableFooterView = UIView(frame: .zero)
         
         self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.estimatedRowHeight = 10.0
+        self.tableView.estimatedRowHeight = 5.0
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,7 +100,7 @@ public class GHGenericSectionTableViewController: UITableViewController {
         self.filteredListSource?.count ?? 0
     }
     
-    public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    /*public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         self.filteredListSource?[section].titleSection
     }
     
@@ -123,7 +118,7 @@ public class GHGenericSectionTableViewController: UITableViewController {
         }
         
         return self.heightForHeader
-    }
+    }*/
 
     //MARK: CUSTOM SOURCE
     public func setSource(listSource: [GHModelTableDelegate]) {
@@ -161,9 +156,6 @@ public class GHGenericSectionTableViewController: UITableViewController {
         self.filteredListSource?.removeAll()
         self.filteredListSource = nil
         
-        self.dcViewHeaders.removeAll()
-        
-        self.collectionDelegate = nil
         self.delegate = nil
     }
 }

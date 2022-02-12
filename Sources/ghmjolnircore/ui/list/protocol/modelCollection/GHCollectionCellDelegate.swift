@@ -21,7 +21,7 @@ public protocol GHModelCollectionDelegate {
 
 public extension GHModelCollectionDelegate {
     var sizeForItem: CGSize {
-        CGSize.zero
+        .zero
     }
     
     var bundle: Bundle? {
@@ -32,18 +32,19 @@ public extension GHModelCollectionDelegate {
         collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> GHCollectionViewCellDelegate? {
-        var cell = collectionView.dequeueReusableCell(
+        let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: self.reuseIdentifier,
             for: indexPath
         ) as? GHCollectionViewCellDelegate
         
-        if cell == nil {
+        guard let cell = cell else {
             let nib = self.bundle?.loadNibNamed(
                 self.reuseIdentifier,
                 owner: collectionView,
                 options: nil
             )
-            cell = nib?[0] as? GHCollectionViewCellDelegate
+            
+            return nib?.first as? GHCollectionViewCellDelegate
         }
         
         return cell

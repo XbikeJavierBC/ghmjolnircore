@@ -7,19 +7,20 @@
 
 import UIKit
 
-//MARK: UITableViewCell
+//MARK: Simple UITableViewCell
 public protocol GHSimpleTableViewCellDelegate {
     func bind(model: GHModelTableDelegate)
 }
 
+//MARK: Netflix UITableViewCell
 public protocol GHTableViewCellDelegate: GHSimpleTableViewCellDelegate {
-    var genericCollectionView: GHGenericCollectionViewController { get set }
+    var genericCollectionView: GHStrategyCollectionController { get set }
     
-    func bind(model: GHModelTableDelegate, delegate: GHGenericCollectionViewControllerDelegate?)
+    func bind(model: GHModelTableDelegate, delegate: GHStrategyCollectionControllerDelegate?)
 }
 
 public extension GHTableViewCellDelegate where Self: UITableViewCell {
-    func bind(model: GHModelTableDelegate, delegate: GHGenericCollectionViewControllerDelegate?) {
+    func bind(model: GHModelTableDelegate, delegate: GHStrategyCollectionControllerDelegate?) {
         if self.genericCollectionView.collectionDelegate == nil {
             self.genericCollectionView.collectionDelegate = delegate
         }
