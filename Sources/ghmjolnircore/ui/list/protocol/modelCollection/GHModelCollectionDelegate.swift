@@ -20,13 +20,8 @@ public protocol GHModelCollectionDelegate {
 }
 
 public extension GHModelCollectionDelegate {
-    var sizeForItem: CGSize {
-        .zero
-    }
-    
-    var bundle: Bundle? {
-        return .main
-    }
+    var sizeForItem: CGSize { .zero }
+    var bundle: Bundle? { .main }
     
     func collectionView(
         collectionView: UICollectionView,

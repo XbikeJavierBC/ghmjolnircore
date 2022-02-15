@@ -1,25 +1,23 @@
 //
-//  GHGenericSectionTableViewController.swift
-//  LNMainApp
+//  GHStrategyTableController.swift
+//  
 //
-//  Created by Javier Carapia on 24/08/21.
+//  Created by Javier Carapia on 14/02/22.
 //
 
 import UIKit
 
-public protocol GHStrategyTableControllerDelegate: AnyObject {
-    func itemSelected(model: GHModelTableDelegate)
-}
-
-public class GHStrategyTableController: UITableViewController {
-    internal var listSource: [GHModelTableDelegate]?
-    internal var filteredListSource: [GHModelTableDelegate]?
+public class GHStrategyTableSectionController: UITableViewController {
+    internal var listSource: [GHModelTableSectionDelegate]?
+    internal var filteredListSource: [GHModelTableSectionDelegate]?
     
     private var customView: ViewListener?
     private var heightForHeader: CGFloat = 0.0
+    private var sectionViewList: [Int: UIView] = [:]
     private lazy var nibList: [(nibName: String, bundle: Bundle)] = []
     
     public typealias ViewListener = (String) -> UIView?
+    
     public weak var delegate: GHStrategyTableControllerDelegate?
     
     public init(nibList: [(String, Bundle)]) {
@@ -61,13 +59,14 @@ public class GHStrategyTableController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.filteredListSource?.count ?? 0
+        self.filteredListSource?[section].listSection?.count ?? 0
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: GHSimpleTableViewCellDelegate?
         
-        if let data = self.filteredListSource?[indexPath.row] {
+        if let section = self.filteredListSource?[indexPath.section],
+                let data = section.listSection?[indexPath.row] {
             cell = data.cellForTableView(tableView: tableView, atIndexPath: indexPath)
             cell?.bind(model: data)
         }
@@ -90,13 +89,55 @@ public class GHStrategyTableController: UITableViewController {
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        if let data = self.filteredListSource?[indexPath.row] {
+        if let section = self.filteredListSource?[indexPath.section],
+                let data = section.listSection?[indexPath.row] {
             self.delegate?.itemSelected(model: data)
         }
     }
+    
+    //MARK: SECTION DELEGATE
+    public override func numberOfSections(in tableView: UITableView) -> Int {
+        self.filteredListSource?.count ?? 0
+    }
+    
+    public override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        self.filteredListSource?[section].titleSection
+    }
+    
+    public override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let title = self.filteredListSource?[section].titleSection else {
+            return nil
+        }
+        
+        guard let view = self.sectionViewList[section] else {
+            if let cv = self.customView?(title) {
+                self.sectionViewList[section] = cv
+            }
+            
+            return self.sectionViewList[section]
+        }
+        
+        return view
+    }
+    
+    public override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if let data = self.filteredListSource?[section], let title = data.titleSection, title.isEmpty {
+            return 0.0
+        }
+        
+        return self.heightForHeader
+    }
+    
+    override public func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
+        if let data = self.filteredListSource?[section], let title = data.titleSection, title.isEmpty {
+            return 0.0
+        }
+        
+        return self.heightForHeader
+    }
 
     //MARK: CUSTOM SOURCE
-    public func setSource(listSource: [GHModelTableDelegate]) {
+    public func setSource(listSource: [GHModelTableSectionDelegate]) {
         self.listSource?.removeAll()
         self.listSource = nil
         self.listSource = listSource
@@ -108,13 +149,13 @@ public class GHStrategyTableController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    public func setFilterSource(closure: ([GHModelTableDelegate]?) -> [GHModelTableDelegate]?) {
+    public func setFilterSource(closure: ([GHModelTableSectionDelegate]?) -> [GHModelTableSectionDelegate]?) {
         self.filteredListSource?.removeAll()
         self.filteredListSource = closure(self.listSource)
         self.tableView.reloadData()
     }
     
-    public func getSource() -> [GHModelTableDelegate]? {
+    public func getSource() -> [GHModelTableSectionDelegate]? {
         self.listSource
     }
     
