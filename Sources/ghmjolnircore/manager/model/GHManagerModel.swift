@@ -5,6 +5,8 @@
 //  Created by Javier Carapia on 25/01/22.
 //
 
+import Foundation
+
 public protocol GHManagerModelDelegate {
     func getController() -> GHBaseViewControllerDelegate?
     func getViewModel() -> GHBaseViewModelProtocol?
@@ -12,7 +14,7 @@ public protocol GHManagerModelDelegate {
 
 public class GHManagerModel {
     public var type: Int?
-    public var findClass: AnyClass?
+    public var bundle: Bundle?
     public var delegate: GHManagerModelDelegate?
 }
 
@@ -31,8 +33,8 @@ public class GHManagerModelBuilder {
         return self
     }
     
-    public func withFindClass(findClass: AnyClass) -> GHManagerModelBuilder {
-        self.managerModel.findClass = findClass
+    public func withBundle(bundle: Bundle) -> GHManagerModelBuilder {
+        self.managerModel.bundle = bundle
         return self
     }
 

@@ -24,6 +24,20 @@
 		92339D77279CB506005DE201 /* GHViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339D76279CB506005DE201 /* GHViewExtension.swift */; };
 		92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339E3B279D4633005DE201 /* GHModuleBundle.swift */; };
 		92803C0427A107280059660F /* GHManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92803C0327A107280059660F /* GHManagerModel.swift */; };
+		9292D26727BEBEE9005F89BA /* GHStrategyTableSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26427BEBEE9005F89BA /* GHStrategyTableSwipeController.swift */; };
+		9292D26827BEBEE9005F89BA /* GHStrategyTableSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26427BEBEE9005F89BA /* GHStrategyTableSwipeController.swift */; };
+		9292D26927BEBEE9005F89BA /* GHStrategyTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26527BEBEE9005F89BA /* GHStrategyTableController.swift */; };
+		9292D26A27BEBEE9005F89BA /* GHStrategyTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26527BEBEE9005F89BA /* GHStrategyTableController.swift */; };
+		9292D26B27BEBEE9005F89BA /* GHStrategyTableSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26627BEBEE9005F89BA /* GHStrategyTableSectionController.swift */; };
+		9292D26C27BEBEE9005F89BA /* GHStrategyTableSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26627BEBEE9005F89BA /* GHStrategyTableSectionController.swift */; };
+		9292D26E27BEBEFC005F89BA /* GHStrategyCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26D27BEBEFC005F89BA /* GHStrategyCollectionController.swift */; };
+		9292D26F27BEBEFC005F89BA /* GHStrategyCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D26D27BEBEFC005F89BA /* GHStrategyCollectionController.swift */; };
+		9292D27127BEBF18005F89BA /* GHModelCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27027BEBF18005F89BA /* GHModelCollectionDelegate.swift */; };
+		9292D27227BEBF18005F89BA /* GHModelCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27027BEBF18005F89BA /* GHModelCollectionDelegate.swift */; };
+		9292D27527BEBF20005F89BA /* GHModelTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27327BEBF1F005F89BA /* GHModelTableDelegate.swift */; };
+		9292D27627BEBF20005F89BA /* GHModelTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27327BEBF1F005F89BA /* GHModelTableDelegate.swift */; };
+		9292D27727BEBF20005F89BA /* GHModelTableSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27427BEBF1F005F89BA /* GHModelTableSectionDelegate.swift */; };
+		9292D27827BEBF20005F89BA /* GHModelTableSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9292D27427BEBF1F005F89BA /* GHModelTableSectionDelegate.swift */; };
 		OBJ_55 /* GHLiveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GHLiveData.swift */; };
 		OBJ_57 /* GHBundleParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GHBundleParameters.swift */; };
 		OBJ_58 /* GHManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GHManagerController.swift */; };
@@ -31,11 +45,7 @@
 		OBJ_60 /* GHBaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GHBaseViewControllerDelegate.swift */; };
 		OBJ_61 /* GHCacheImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* GHCacheImage.swift */; };
 		OBJ_62 /* GHCacheImageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* GHCacheImageDelegate.swift */; };
-		OBJ_63 /* GHGenericCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* GHGenericCollectionViewController.swift */; };
 		OBJ_64 /* GHModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* GHModelDelegate.swift */; };
-		OBJ_65 /* GHCollectionCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* GHCollectionCellDelegate.swift */; };
-		OBJ_66 /* GHTableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* GHTableCellDelegate.swift */; };
-		OBJ_67 /* GHGenericSectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* GHGenericSectionTableViewController.swift */; };
 		OBJ_68 /* GHColorExtesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* GHColorExtesnion.swift */; };
 		OBJ_69 /* GHBaseViewModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* GHBaseViewModuleProtocol.swift */; };
 		OBJ_76 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -64,6 +74,13 @@
 		92339D76279CB506005DE201 /* GHViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHViewExtension.swift; sourceTree = "<group>"; };
 		92339E3B279D4633005DE201 /* GHModuleBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHModuleBundle.swift; sourceTree = "<group>"; };
 		92803C0327A107280059660F /* GHManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHManagerModel.swift; sourceTree = "<group>"; };
+		9292D26427BEBEE9005F89BA /* GHStrategyTableSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHStrategyTableSwipeController.swift; sourceTree = "<group>"; };
+		9292D26527BEBEE9005F89BA /* GHStrategyTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHStrategyTableController.swift; sourceTree = "<group>"; };
+		9292D26627BEBEE9005F89BA /* GHStrategyTableSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHStrategyTableSectionController.swift; sourceTree = "<group>"; };
+		9292D26D27BEBEFC005F89BA /* GHStrategyCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHStrategyCollectionController.swift; sourceTree = "<group>"; };
+		9292D27027BEBF18005F89BA /* GHModelCollectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHModelCollectionDelegate.swift; sourceTree = "<group>"; };
+		9292D27327BEBF1F005F89BA /* GHModelTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHModelTableDelegate.swift; sourceTree = "<group>"; };
+		9292D27427BEBF1F005F89BA /* GHModelTableSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHModelTableSectionDelegate.swift; sourceTree = "<group>"; };
 		OBJ_11 /* GHLiveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHLiveData.swift; sourceTree = "<group>"; };
 		OBJ_14 /* GHBundleParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBundleParameters.swift; sourceTree = "<group>"; };
 		OBJ_15 /* GHManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHManagerController.swift; sourceTree = "<group>"; };
@@ -71,18 +88,14 @@
 		OBJ_19 /* GHBaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		OBJ_21 /* GHCacheImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCacheImage.swift; sourceTree = "<group>"; };
 		OBJ_23 /* GHCacheImageDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCacheImageDelegate.swift; sourceTree = "<group>"; };
-		OBJ_28 /* GHGenericCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGenericCollectionViewController.swift; sourceTree = "<group>"; };
 		OBJ_31 /* GHModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHModelDelegate.swift; sourceTree = "<group>"; };
-		OBJ_33 /* GHCollectionCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHCollectionCellDelegate.swift; sourceTree = "<group>"; };
-		OBJ_35 /* GHTableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHTableCellDelegate.swift; sourceTree = "<group>"; };
-		OBJ_38 /* GHGenericSectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGenericSectionTableViewController.swift; sourceTree = "<group>"; };
 		OBJ_40 /* GHColorExtesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHColorExtesnion.swift; sourceTree = "<group>"; };
 		OBJ_42 /* GHBaseViewModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHBaseViewModuleProtocol.swift; sourceTree = "<group>"; };
 		OBJ_45 /* ghmjolnircoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ghmjolnircoreTests.swift; sourceTree = "<group>"; };
 		OBJ_49 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* ghmjolnircore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ghmjolnircore.h; sourceTree = "<group>"; };
-		"ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ghmjolnircore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"ghmjolnircore::ghmjolnircore::Product" /* ghmjolnircore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ghmjolnircore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"ghmjolnircore::ghmjolnircoreTests::Product" /* ghmjolnircoreTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = ghmjolnircoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,7 +210,7 @@
 		OBJ_27 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_28 /* GHGenericCollectionViewController.swift */,
+				9292D26D27BEBEFC005F89BA /* GHStrategyCollectionController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -223,7 +236,7 @@
 		OBJ_32 /* modelCollection */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_33 /* GHCollectionCellDelegate.swift */,
+				9292D27027BEBF18005F89BA /* GHModelCollectionDelegate.swift */,
 			);
 			path = modelCollection;
 			sourceTree = "<group>";
@@ -231,7 +244,8 @@
 		OBJ_34 /* modelTable */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_35 /* GHTableCellDelegate.swift */,
+				9292D27327BEBF1F005F89BA /* GHModelTableDelegate.swift */,
+				9292D27427BEBF1F005F89BA /* GHModelTableSectionDelegate.swift */,
 			);
 			path = modelTable;
 			sourceTree = "<group>";
@@ -247,7 +261,9 @@
 		OBJ_37 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_38 /* GHGenericSectionTableViewController.swift */,
+				9292D26527BEBEE9005F89BA /* GHStrategyTableController.swift */,
+				9292D26627BEBEE9005F89BA /* GHStrategyTableSectionController.swift */,
+				9292D26427BEBEE9005F89BA /* GHStrategyTableSwipeController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -404,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9292D27727BEBF20005F89BA /* GHModelTableSectionDelegate.swift in Sources */,
 				OBJ_55 /* GHLiveData.swift in Sources */,
 				OBJ_57 /* GHBundleParameters.swift in Sources */,
 				OBJ_58 /* GHManagerController.swift in Sources */,
@@ -411,16 +428,18 @@
 				OBJ_60 /* GHBaseViewControllerDelegate.swift in Sources */,
 				OBJ_61 /* GHCacheImage.swift in Sources */,
 				92339D77279CB506005DE201 /* GHViewExtension.swift in Sources */,
+				9292D27127BEBF18005F89BA /* GHModelCollectionDelegate.swift in Sources */,
 				OBJ_62 /* GHCacheImageDelegate.swift in Sources */,
-				OBJ_63 /* GHGenericCollectionViewController.swift in Sources */,
+				9292D26727BEBEE9005F89BA /* GHStrategyTableSwipeController.swift in Sources */,
 				92339E3C279D4633005DE201 /* GHModuleBundle.swift in Sources */,
 				OBJ_64 /* GHModelDelegate.swift in Sources */,
 				92803C0427A107280059660F /* GHManagerModel.swift in Sources */,
-				OBJ_65 /* GHCollectionCellDelegate.swift in Sources */,
-				OBJ_66 /* GHTableCellDelegate.swift in Sources */,
-				OBJ_67 /* GHGenericSectionTableViewController.swift in Sources */,
+				9292D26E27BEBEFC005F89BA /* GHStrategyCollectionController.swift in Sources */,
+				9292D26B27BEBEE9005F89BA /* GHStrategyTableSectionController.swift in Sources */,
 				OBJ_68 /* GHColorExtesnion.swift in Sources */,
 				OBJ_69 /* GHBaseViewModuleProtocol.swift in Sources */,
+				9292D27527BEBF20005F89BA /* GHModelTableDelegate.swift in Sources */,
+				9292D26927BEBEE9005F89BA /* GHStrategyTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +447,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				9292D26C27BEBEE9005F89BA /* GHStrategyTableSectionController.swift in Sources */,
+				9292D27627BEBF20005F89BA /* GHModelTableDelegate.swift in Sources */,
+				9292D27227BEBF18005F89BA /* GHModelCollectionDelegate.swift in Sources */,
 				OBJ_76 /* Package.swift in Sources */,
+				9292D27827BEBF20005F89BA /* GHModelTableSectionDelegate.swift in Sources */,
+				9292D26827BEBEE9005F89BA /* GHStrategyTableSwipeController.swift in Sources */,
+				9292D26A27BEBEE9005F89BA /* GHStrategyTableController.swift in Sources */,
+				9292D26F27BEBEFC005F89BA /* GHStrategyCollectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +547,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircore_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
@@ -551,7 +577,7 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ghmjolnircore.xcodeproj/ghmjolnircore_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
