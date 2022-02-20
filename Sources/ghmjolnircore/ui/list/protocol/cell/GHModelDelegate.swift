@@ -10,6 +10,17 @@ import UIKit
 //MARK: Simple UITableViewCell
 public protocol GHSimpleTableViewCellDelegate {
     func bind(model: GHModelTableDelegate)
+    func bind(model: GHModelTableDelegate, cellDelegate: GHStrategyTableViewCellDelegate?)
+}
+
+public extension GHSimpleTableViewCellDelegate {
+    func bind(model: GHModelTableDelegate) {
+        
+    }
+    
+    func bind(model: GHModelTableDelegate, cellDelegate: GHStrategyTableViewCellDelegate?) {
+        self.bind(model: model)
+    }
 }
 
 //MARK: Netflix UITableViewCell

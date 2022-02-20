@@ -11,6 +11,10 @@ public protocol GHStrategyTableControllerDelegate: AnyObject {
     func itemSelected(model: GHModelTableDelegate)
 }
 
+public protocol GHStrategyTableViewCellDelegate: AnyObject {
+    func tapView(identifier: Int, data: Any?)
+}
+
 public class GHStrategyTableController: UITableViewController {
     internal var listSource: [GHModelTableDelegate]?
     internal var filteredListSource: [GHModelTableDelegate]?
@@ -20,7 +24,9 @@ public class GHStrategyTableController: UITableViewController {
     private lazy var nibList: [(nibName: String, bundle: Bundle)] = []
     
     public typealias ViewListener = (String) -> UIView?
+    
     public weak var delegate: GHStrategyTableControllerDelegate?
+    public weak var cellDelegate: GHStrategyTableViewCellDelegate?
     
     public init(nibList: [(String, Bundle)]) {
         super.init(style: .plain)
@@ -69,7 +75,7 @@ public class GHStrategyTableController: UITableViewController {
         
         if let data = self.filteredListSource?[indexPath.row] {
             cell = data.cellForTableView(tableView: tableView, atIndexPath: indexPath)
-            cell?.bind(model: data)
+            cell?.bind(model: data, cellDelegate: self.cellDelegate)
         }
         
         guard let cell = cell as? UITableViewCell else {
