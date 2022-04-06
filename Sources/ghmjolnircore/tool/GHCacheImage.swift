@@ -80,7 +80,9 @@ public final class GHCacheImage {
             DispatchQueue.main.async { [weak self] in
                 guard let _ = self else { return }
                 
-                imageView.image = chacheImage
+                if poiner(model, chacheImage) {
+                    imageView.image = chacheImage
+                }
             }
         })
     }
