@@ -22,7 +22,7 @@ public final class GHCacheImage {
     public func setCacheAsset(
         model: GHCacheImageDelegate,
         imageView: UIImageView,
-        poiner: @escaping (GHCacheImageDelegate) -> Bool
+        poiner: @escaping (GHCacheImageDelegate, UIImage?) -> Bool
     ) {
         
         DispatchQueue.main.async {
@@ -40,7 +40,7 @@ public final class GHCacheImage {
                                     guard let self = self else { return }
                                     
                                     self.setValue(key: model.urlImage, image: UIImage())
-                                    if poiner(model) {
+                                    if poiner(model, nil) {
                                         imageView.image = UIImage()
                                     }
                                 }
@@ -54,7 +54,7 @@ public final class GHCacheImage {
                                         guard let self = self else { return }
                                         
                                         self.setValue(key: model.urlImage, image: imageResponse)
-                                        if poiner(model) {
+                                        if poiner(model, imageResponse) {
                                             imageView.image = imageResponse
                                         }
                                     }

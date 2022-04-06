@@ -9,28 +9,64 @@ import XCTest
 @testable import ghmjolnircore
 
 class ghmjolnircoreTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testOneExample() throws {
+        self.fizzBuzz(n: 15)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testTwoExample() throws {
+        let foo = self.alphabeticWordsList(text: "I think the solution is fairly obvious.")
+        let doo = self.alphabeticWordsList(text: "Chase two rabbits, catch none.")
+        let ree = self.alphabeticWordsList(text: "We become what we think about.")
+        let mii = self.alphabeticWordsList(text: "The quick brown fox jumped over the lazy dogs back.")
+        
+        let faa = self.alphabeticWordsList(text: " ")
+        
+        print(foo, doo, ree, mii, faa)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testTreeExample() throws {
+        let foo = self.simpleArraySum(ar: [1, 2, 3, 4, 10, 11])
+        
+        print(foo)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    private func fizzBuzz(n: Int) -> Void {
+        for i in 1...n {
+            if (i % 3 == 0 && i % 5 == 0) {
+                print("FizzBuzz")
+            }
+            else if (i % 3 == 0 && i % 5 != 0) {
+                print("Fizz")
+            }
+            else if (i % 5 == 0 && i % 3 != 0) {
+                print("Buzz")
+            }
+            else {
+                print(i)
+            }
         }
     }
-
+    
+    private func alphabeticWordsList(text: String) -> [String] {
+        if text.isEmpty {
+            return []
+        }
+        
+        let separatedCharacter = " "
+        let invaldCharacterList = Set(",.")
+        
+        let list = text
+            .filter { !invaldCharacterList.contains($0) }
+            .lowercased()
+            .components(separatedBy: separatedCharacter)
+            .filter { !$0.isEmpty }
+        
+        let min = list.map { $0.count }.min()
+        
+        return list.filter { $0.count == min }
+    }
+    
+    private func simpleArraySum(ar: [Int]) -> Int {
+        return ar.reduce(0) { $0 + $1 }
+    }
 }

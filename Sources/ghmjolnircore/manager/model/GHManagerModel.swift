@@ -28,7 +28,7 @@ public class GHManagerModelBuilder {
         return self
     }
     
-    public  func withDelegate(delegate: GHManagerModelDelegate) -> GHManagerModelBuilder {
+    public func withDelegate(delegate: GHManagerModelDelegate) -> GHManagerModelBuilder {
         self.managerModel.delegate = delegate
         return self
     }
