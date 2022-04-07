@@ -87,6 +87,61 @@ public final class GHCacheImage {
         })
     }
     
+    public func setSimpleCacheAsset(
+        urlStr: String,
+        closurePointer: @escaping (UIImage?) -> ()
+    ) {
+        self.getValue(key: urlStr, closure: { image in
+            guard let chacheImage = image else {
+                if let url = URL(string: urlStr) {
+                    let task = URLSession(configuration: .default).dataTask(
+                        with: url,
+                        completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+                            if let _ = error {
+                                DispatchQueue.main.async { [weak self] in
+                                    guard let self = self else { return }
+                                    
+                                    self.setValue(key: urlStr, image: UIImage())
+                                    closurePointer(nil)
+                                }
+                                
+                                return
+                            }
+                            
+                            if let dt = data {
+                                if let imageResponse = UIImage(data: dt) {
+                                    DispatchQueue.main.async { [weak self] in
+                                        guard let self = self else { return }
+                                        
+                                        self.setValue(key: urlStr, image: imageResponse)
+                                        closurePointer(imageResponse)
+                                    }
+                                    return
+                                }
+                            }
+                        }
+                    )
+                        
+                    task.resume()
+                }
+                else {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
+                        
+                        self.setValue(key: urlStr, image: UIImage())
+                    }
+                }
+                return
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let _ = self else { return }
+                
+                closurePointer(chacheImage)
+            }
+        })
+    }
+    
     private func setValue(key: String, image: UIImage) {
         self.synQueue.sync { [weak self] in
             guard let self = self else { return }
