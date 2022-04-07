@@ -17,16 +17,18 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
     
     private lazy var listSource: [GHModelCollectionDelegate]? = []
     private lazy var nibList: [(nibName: String, bundle: Bundle)] = []
+    private lazy var minimumLineSpacing: CGFloat = 0.0
     
     weak public var collectionDelegate: GHStrategyCollectionControllerDelegate?
     
-    public init(nibList: [(String, Bundle)], direction: UICollectionView.ScrollDirection? = nil) {
+    public init(nibList: [(String, Bundle)], direction: UICollectionView.ScrollDirection? = nil, minimumLineSpacing: CGFloat = 0.0) {
         self.flowLayout = UICollectionViewFlowLayout()
         self.flowLayout?.scrollDirection = direction ?? .horizontal
         
         super.init(collectionViewLayout: self.flowLayout!)
         
         self.nibList = nibList
+        self.minimumLineSpacing = minimumLineSpacing
     }
     
     public required init(direction: UICollectionView.ScrollDirection? = nil) {
@@ -121,7 +123,7 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
     public func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        9.0
+        self.minimumLineSpacing
     }
     
     /**
