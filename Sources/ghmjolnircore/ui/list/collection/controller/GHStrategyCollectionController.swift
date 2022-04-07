@@ -24,9 +24,9 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
         self.flowLayout = UICollectionViewFlowLayout()
         self.flowLayout?.scrollDirection = direction ?? .horizontal
         
-        self.nibList = nibList
-        
         super.init(collectionViewLayout: self.flowLayout!)
+        
+        self.nibList = nibList
     }
     
     public required init(direction: UICollectionView.ScrollDirection? = nil) {
