@@ -20,6 +20,15 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
     
     weak public var collectionDelegate: GHStrategyCollectionControllerDelegate?
     
+    public init(nibList: [(String, Bundle)], direction: UICollectionView.ScrollDirection? = nil) {
+        self.flowLayout = UICollectionViewFlowLayout()
+        self.flowLayout?.scrollDirection = direction ?? .horizontal
+        
+        self.nibList = nibList
+        
+        super.init(collectionViewLayout: self.flowLayout!)
+    }
+    
     public required init(direction: UICollectionView.ScrollDirection? = nil) {
         self.flowLayout = UICollectionViewFlowLayout()
         self.flowLayout?.scrollDirection = direction ?? .horizontal
@@ -124,10 +133,6 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
         self.listSource = list
         
         self.collectionView?.reloadData()
-    }
-    
-    public func setRegisterNibList(nibList: [(String, Bundle)]) {
-        self.nibList = nibList
     }
     
     public func removeReferenceContext() {
