@@ -7,5 +7,5 @@
 
 public protocol GHModelTableSectionDelegate {
     var titleSection: String? { get set }
-    var listSection: [GHModelTableDelegate]? { get set }
+    var listSection: [GHModelSimpleTableDelegate]? { get set }
 }

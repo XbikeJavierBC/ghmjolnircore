@@ -8,12 +8,12 @@
 import UIKit
 
 public protocol GHStrategyTableSwipeControllerDelegate: GHStrategyTableControllerDelegate {
-    func modelSwipeSelected(model: GHModelTableDelegate, position: Int)
-    func canEditRowAt(model: GHModelTableDelegate, position: Int) -> Bool
+    func modelSwipeSelected(model: GHModelSimpleTableDelegate, position: Int)
+    func canEditRowAt(model: GHModelSimpleTableDelegate, position: Int) -> Bool
 }
 
 public extension GHStrategyTableSwipeControllerDelegate {
-    func canEditRowAt(model: GHModelTableDelegate, position: Int) -> Bool {
+    func canEditRowAt(model: GHModelSimpleTableDelegate, position: Int) -> Bool {
         return true
     }
 }

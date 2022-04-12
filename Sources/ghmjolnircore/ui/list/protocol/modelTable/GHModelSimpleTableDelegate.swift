@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol GHModelTableDelegate {
+public protocol GHModelSimpleTableDelegate {
     var reuseIdentifier: String { get }
     
     var heightForRow: CGFloat { get }
@@ -21,7 +21,7 @@ public protocol GHModelTableDelegate {
     ) -> GHSimpleTableViewCellDelegate?
 }
 
-public extension GHModelTableDelegate {
+public extension GHModelSimpleTableDelegate {
     var heightForRow: CGFloat { 0.0 }
     var bundle: Bundle? { .main }
     var titleSwipe: String? { nil }

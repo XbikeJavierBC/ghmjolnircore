@@ -18,6 +18,7 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
     private lazy var listSource: [GHModelCollectionDelegate]? = []
     private lazy var nibList: [(nibName: String, bundle: Bundle)] = []
     private lazy var minimumLineSpacing: CGFloat = 0.0
+    private lazy var section = 0
     
     weak public var collectionDelegate: GHStrategyCollectionControllerDelegate?
     
@@ -126,10 +127,16 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
         self.minimumLineSpacing
     }
     
+    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        GHScrollDictionary.sharedInstance.add(scrollView.contentOffset.x, key: self.section)
+    }
+    
     /**
      Data Source
      */
-    public func setSource(list: [GHModelCollectionDelegate]) {
+    public func setSource(list: [GHModelCollectionDelegate], section: Int) {
+        self.section = section
+        
         self.listSource?.removeAll()
         self.listSource = nil
         self.listSource = list
