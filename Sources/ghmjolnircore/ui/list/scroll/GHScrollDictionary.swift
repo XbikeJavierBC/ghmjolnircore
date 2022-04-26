@@ -21,7 +21,7 @@ public class GHScrollDictionary {
         _params.updateValue(value, forKey: key)
     }
     
-    func get<T>(_ key: Int) -> T? {
+    public func get<T>(_ key: Int) -> T? {
         if let returna = _params[key] as? T {
             return returna
         }

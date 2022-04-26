@@ -21,6 +21,10 @@ public protocol GHNetflixTableViewCellDelegate {
 }
 
 public extension GHNetflixTableViewCellDelegate where Self: UITableViewCell {
+    func bind(model: GHModelNetflixTableDelegate) {
+        print("Foo")
+    }
+    
     func bind(
         model: GHModelNetflixTableDelegate,
         delegate: GHStrategyCollectionControllerDelegate?,

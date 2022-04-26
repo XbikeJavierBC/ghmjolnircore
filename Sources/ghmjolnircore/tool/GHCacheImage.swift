@@ -9,7 +9,15 @@ import UIKit
 
 public final class GHCacheImage {
     private lazy var synQueue = DispatchQueue(label: "serializationQueue")
-    public static let shared = GHCacheImage()
+    private static var instance: GHCacheImage?
+    
+    public static var shared: GHCacheImage {
+        if self.instance == nil {
+            self.instance = GHCacheImage()
+        }
+        
+        return self.instance!
+    }
     
     private var dict = [String: UIImage?]()
     

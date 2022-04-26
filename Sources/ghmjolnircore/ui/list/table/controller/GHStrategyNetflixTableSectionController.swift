@@ -18,7 +18,7 @@ public extension GHStrategyNetflixTableSectionControllerDelegate {
 }
 
 public class GHStrategyNetflixTableSectionController: UITableViewController {
-    weak var itemDelegate: GHStrategyCollectionControllerDelegate?
+    public weak var itemDelegate: GHStrategyCollectionControllerDelegate?
     
     internal var listSource: [GHModelNetflixTableDelegate]?
     internal var filteredListSource: [GHModelNetflixTableDelegate]?
@@ -131,7 +131,7 @@ public class GHStrategyNetflixTableSectionController: UITableViewController {
     /**
      *  CUSTOM SOURCE
      */
-    func setSource(listSource: [GHModelNetflixTableDelegate]) {
+    public func setSource(listSource: [GHModelNetflixTableDelegate]) {
         self.listSource?.removeAll()
         self.listSource = nil
         self.listSource = listSource
@@ -143,7 +143,7 @@ public class GHStrategyNetflixTableSectionController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func setFilterSource(closure: ([GHModelNetflixTableDelegate]?) -> [GHModelNetflixTableDelegate]?) {
+    public func setFilterSource(closure: ([GHModelNetflixTableDelegate]?) -> [GHModelNetflixTableDelegate]?) {
         self.filteredListSource?.removeAll()
         self.filteredListSource = closure(self.listSource)
         self.tableView.reloadData()

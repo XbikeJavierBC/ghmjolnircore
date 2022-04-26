@@ -8,7 +8,7 @@
 import UIKit
 
 public protocol GHModelCollectionDelegate {
-    var reuseIdentifier: String { get }
+    var reuseCollectionIdentifier: String { get }
     
     var sizeForItem: CGSize { get }
     var bundle: Bundle? { get }
@@ -28,13 +28,13 @@ public extension GHModelCollectionDelegate {
         cellForItemAt indexPath: IndexPath
     ) -> GHCollectionViewCellDelegate? {
         let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: self.reuseIdentifier,
+            withReuseIdentifier: self.reuseCollectionIdentifier,
             for: indexPath
         ) as? GHCollectionViewCellDelegate
         
         guard let cell = cell else {
             let nib = self.bundle?.loadNibNamed(
-                self.reuseIdentifier,
+                self.reuseCollectionIdentifier,
                 owner: collectionView,
                 options: nil
             )
