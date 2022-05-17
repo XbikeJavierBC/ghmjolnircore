@@ -74,7 +74,8 @@ public class GHStrategyNetflixTableSectionController: UITableViewController {
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: GHNetflixTableViewCellDelegate?
         
-        if let data = self.filteredListSource?[indexPath.section] {
+        if let list = self.filteredListSource, list.count > indexPath.section {
+            let data = list[indexPath.section]
             cell = data.cellForTableView(tableView: tableView, atIndexPath: indexPath)
             cell?.bind(model: data, delegate: self.itemDelegate, section: indexPath.section)
         }
@@ -121,8 +122,10 @@ public class GHStrategyNetflixTableSectionController: UITableViewController {
     }
     
     public override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if let data = self.filteredListSource?[section], data.titleSection.isEmpty {
-            return 0.0
+        if let list = self.filteredListSource, list.count > section {
+            if list[section].titleSection.isEmpty {
+                return 0.0
+            }
         }
         
         return self.heightForHeader
