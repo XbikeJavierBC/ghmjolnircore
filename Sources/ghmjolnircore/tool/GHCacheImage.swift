@@ -71,7 +71,7 @@ public final class GHCacheImage {
                             }
                         }
                     )
-                        
+                    
                     task.resume()
                 }
                 else {
@@ -102,35 +102,50 @@ public final class GHCacheImage {
         self.getValue(key: urlStr, closure: { image in
             guard let chacheImage = image else {
                 if let url = URL(string: urlStr) {
-                    let task = URLSession(configuration: .default).dataTask(
-                        with: url,
-                        completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
-                            if let _ = error {
+                    //                    let task = URLSession.shared.dataTask(
+                    //                        with: url,
+                    //                        completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
+                    //                            if let _ = error {
+                    //                                DispatchQueue.main.async { [weak self] in
+                    //                                    guard let self = self else { return }
+                    //
+                    //                                    self.setValue(key: urlStr, image: UIImage())
+                    //                                    closurePointer(nil)
+                    //                                }
+                    //
+                    //                                return
+                    //                            }
+                    //
+                    //                            if let dt = data {
+                    //                                if let imageResponse = UIImage(data: dt) {
+                    //                                    DispatchQueue.main.async { [weak self] in
+                    //                                        guard let self = self else { return }
+                    //
+                    //                                        self.setValue(key: urlStr, image: imageResponse)
+                    //                                        closurePointer(imageResponse)
+                    //                                    }
+                    //                                    return
+                    //                                }
+                    //                            }
+                    //                        }
+                    //                    )
+                    //
+                    //                    task.resume()
+                    
+                    
+                    DispatchQueue.global().async { [weak self] in
+                        if let data = try? Data(contentsOf: url) {
+                            if let imageResponse = UIImage(data: data) {
                                 DispatchQueue.main.async { [weak self] in
                                     guard let self = self else { return }
-                                    
-                                    self.setValue(key: urlStr, image: UIImage())
-                                    closurePointer(nil)
+
+                                    self.setValue(key: urlStr, image: imageResponse)
+                                    closurePointer(imageResponse)
                                 }
-                                
                                 return
                             }
-                            
-                            if let dt = data {
-                                if let imageResponse = UIImage(data: dt) {
-                                    DispatchQueue.main.async { [weak self] in
-                                        guard let self = self else { return }
-                                        
-                                        self.setValue(key: urlStr, image: imageResponse)
-                                        closurePointer(imageResponse)
-                                    }
-                                    return
-                                }
-                            }
                         }
-                    )
-                        
-                    task.resume()
+                    }
                 }
                 else {
                     DispatchQueue.main.async { [weak self] in
