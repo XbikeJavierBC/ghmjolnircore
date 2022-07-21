@@ -133,7 +133,7 @@ public class GHManagerController {
         )
     }
     
-    private func getLastVcPresented() -> (type: Int, ctrDel: GHBaseViewControllerDelegate?)? {
+    public func getLastVcPresented() -> (type: Int, ctrDel: GHBaseViewControllerDelegate?)? {
         guard let controller = self.viewControllers.last else {
             return nil
         }
