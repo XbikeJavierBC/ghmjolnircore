@@ -9,6 +9,11 @@ import UIKit
 
 public protocol GHStrategyTableControllerDelegate: AnyObject {
     func itemSelected(model: GHModelSimpleTableDelegate)
+    func scrollViewDidScroll(scrollView: UIScrollView)
+}
+
+public extension GHStrategyTableControllerDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {}
 }
 
 public protocol GHStrategyTableViewCellDelegate: AnyObject {
@@ -128,6 +133,11 @@ public class GHStrategyTableController: UITableViewController {
     public func setSectionView(heightSection: CGFloat, viewSection: @escaping ViewListener) {
         self.heightForHeader = heightSection
         self.customView = viewSection
+    }
+    
+    //MARK: SCROLL DELEGATE
+    override public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.delegate?.scrollViewDidScroll(scrollView: scrollView)
     }
     
     public func removeReferenceContext() {
