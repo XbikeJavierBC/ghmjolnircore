@@ -144,6 +144,10 @@ public class GHStrategyCollectionController: UICollectionViewController, UIColle
         self.collectionView?.reloadData()
     }
     
+    public func getDataSource() -> [GHModelCollectionDelegate]? {
+        return self.listSource
+    }
+    
     public func removeReferenceContext() {
         self.listSource?.removeAll()
         self.listSource = nil
